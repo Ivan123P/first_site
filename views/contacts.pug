@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Напишите нам
+  .form-wrap
+    div.row
+      form(id="contacts_form" class="form-horizontal col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6" method="post" action="/greeting")
+        .form-group
+          label(for="contacts_name" class="col-sm-3 control-label") Имя
+          .col-sm-9
+            input(id="contacts_name" class="form-control" name="name" type="text" placeholder="Имя" value="" )/
+        .form-group
+          label(for="contacts_nickname" class="col-sm-3 control-label") Ник
+          .col-sm-9
+            input(id="contacts_nickname" class="form-control" name="nickname" type="text" placeholder="Ник" value="" )/
+        .form-group
+          label(for="contacts_email" class="col-sm-3 control-label") Email
+          .col-sm-9
+            input(id="contacts_email" class="form-control" name="mail" type="email" placeholder="Email" value="" )/
+        .form-group
+          label(for="contacts_textarea1" class="col-sm-3 control-label") Ваш комментарий
+          .col-sm-9
+            textarea(id="contacts_textarea1" class="form-control" name="textarea" rows="3" value="" )
+        div.form__btn
+          input(id="contacts_btn" class="btn btn-primary" type='submit' value="Отправить")

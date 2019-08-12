@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div.greeting-page-wrap
+    h1
+      span= data.name
+      |, Спасибо за сообщение!
+    div "
+      span= data.textarea
+      |"
+      p Ждите ответ на Ваш email - 
+        span.text-bold= data.mail
